@@ -17,7 +17,7 @@ List<Product> productList = [
     '',
   ),
   Product('assets/images/pic3.png', 'Understanding of human behaviour',
-      '13 FebSunday', 'BABYCARE', ''),
+      '10 lessons', 'BABYCARE', ''),
   Product('assets/images/pic2.png', 'Understanding of human behaviour',
       '12 lesson', 'Working Parents', ''),
 ];

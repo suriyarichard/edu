@@ -1,24 +1,26 @@
+import 'dart:math';
+
 import 'package:edu/models/info.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:scroll_snap_list/scroll_snap_list.dart';
 
-class cardTile extends StatefulWidget {
-  const cardTile({super.key});
+class cardTile3 extends StatefulWidget {
+  const cardTile3({super.key});
 
   @override
-  State<cardTile> createState() => _cardTileState();
+  State<cardTile3> createState() => _cardTileState();
 }
 
-class _cardTileState extends State<cardTile> {
+class _cardTileState extends State<cardTile3> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 280,
+      height: 300,
       child: ScrollSnapList(
         itemBuilder: _buildListItem,
-        itemCount: productList.length,
+        itemCount: productList2.length,
         itemSize: 350,
         onItemFocus: (index) {},
         // dynamicItemSize: true,
@@ -32,6 +34,7 @@ class _cardTileState extends State<cardTile> {
       width: 250,
       // height: 500,
       child: Card(
+        // elevation: 12,
         elevation: 0,
         child: ClipRRect(
           // borderRadius: const BorderRadius.all(Radius.circular(10)),
@@ -40,7 +43,7 @@ class _cardTileState extends State<cardTile> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Image.asset(
-                productList[index].imagePath,
+                productList2[index].imagePath,
                 fit: BoxFit.cover,
                 // width: 150,
                 // height: 180,
@@ -51,14 +54,14 @@ class _cardTileState extends State<cardTile> {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Text(
-                  '${productList[index].tag}',
+                  '${productList2[index].tag}',
                   style: const TextStyle(color: Colors.blue),
                 ),
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Text(
-                  productList[index].title,
+                  productList2[index].title,
                   style: const TextStyle(
                       fontSize: 15, fontWeight: FontWeight.bold),
                 ),
@@ -69,14 +72,20 @@ class _cardTileState extends State<cardTile> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      '${productList[index].lessons}',
+                      '${productList2[index].lessons}',
                       style: const TextStyle(
                           fontWeight: FontWeight.bold, color: Colors.grey),
                     ),
-                    // Text(
-                    //   '${product.} Reviews',
-                    //   style: const TextStyle(color: Colors.blue),
-                    // )
+                    OutlinedButton(
+                      onPressed: () {},
+                      child: Text('Book'),
+                      style: ButtonStyle(
+                          side: MaterialStateProperty.all(BorderSide(
+                        color: Colors.blue,
+                        width: 1.0,
+                        style: BorderStyle.solid,
+                      ))),
+                    ),
                   ],
                 ),
               )

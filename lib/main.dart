@@ -12,10 +12,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Edu',
-      debugShowCheckedModeBanner: false,
-
-      // home: const Homepage(),
-      home: const mainPage(),
+      home: mainPage(),
+      debugShowCheckedModeBanner: true,
     );
   }
 }

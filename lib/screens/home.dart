@@ -1,13 +1,9 @@
-import 'dart:ffi';
-
-import 'package:edu/models/info.dart';
 import 'package:edu/utils/card.dart';
+import 'package:edu/utils/cardThree.dart';
 import 'package:edu/utils/cardTwo.dart';
 import 'package:edu/utils/title.dart';
 import 'package:edu/widgets/tracker.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class Homepages extends StatefulWidget {
   const Homepages({super.key});
@@ -70,7 +66,7 @@ class _HomepageState extends State<Homepages> {
                     fontSize: 30,
                     fontFamily: 'Lora',
                     fontStyle: FontStyle.normal,
-                    fontWeight: FontWeight.w500,
+                    fontWeight: FontWeight.w400,
                     // fontWeight: FontWeight.bold
                   ),
                 ),
@@ -87,170 +83,65 @@ class _HomepageState extends State<Homepages> {
                     fontStyle: FontStyle.normal,
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Column(
-                    children: [
-                      Row(
-                        children: [
-                          tracker(
-                            name: 'Programs',
-                          ),
-                          tracker(
-                            name: 'Get help',
-                          ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 5,
-                      ),
-                      Row(
-                        children: [
-                          tracker(
-                            name: 'Learn',
-                          ),
-                          tracker(
-                            name: 'DD Tracker',
-                          ),
-                        ],
-                      )
-                    ],
-                  ),
-                ),
-
-                SizedBox(
-                  height: 30,
-                ),
-                titleText(Title: "Programs for yous"),
                 SizedBox(
                   height: 10,
                 ),
-                // Row(
-                //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                //   crossAxisAlignment: CrossAxisAlignment.start,
-                //   children: [
-                //     Text(
-                //       "Programs for you",
-                //       style: TextStyle(
-                //           fontSize: 20,
-                //           color: Colors.black,
-                //           fontFamily: 'Lora',
-                //           fontStyle: FontStyle.normal,
-                //           fontWeight: FontWeight.w500),
-                //     ),
-                //     Row(
-                //       mainAxisSize: MainAxisSize.min,
-                //       children: [
-                //         GestureDetector(
-                //           onTap: () {},
-                //           child: Text(
-                //             'View all',
-                //             style: TextStyle(
-                //                 fontSize: 15,
-                //                 fontFamily: 'Inter',
-                //                 fontWeight: FontWeight.w500,
-                //                 fontStyle: FontStyle.normal,
-                //                 color: Colors.grey),
-                //           ),
-                //         ),
-                //         Icon(
-                //           Icons.arrow_right_alt_rounded,
-                //           size: 25,
-                //           color: Colors.grey,
-                //         ),
-                //       ],
-                //     )
-                //   ],
+                // Padding(
+                // padding: const EdgeInsets.all(8.0),
+                // child:
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Row(
+                      children: [
+                        tracker(
+                          name: 'Programs',
+                          icon: Icon(
+                            Icons.book_outlined,
+                            color: Color.fromRGBO(89, 139, 237, 1),
+                          ),
+                        ),
+                        tracker(
+                            name: 'Get help',
+                            icon: Icon(
+                              Icons.help,
+                              color: Color.fromRGBO(89, 139, 237, 1),
+                            )),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 5,
+                    ),
+                    Row(
+                      children: [
+                        tracker(
+                            name: 'Learn',
+                            icon: Icon(
+                              Icons.menu_book_outlined,
+                              color: Color.fromRGBO(89, 139, 237, 1),
+                            )),
+                        tracker(
+                            name: 'DD Tracker',
+                            icon: Icon(
+                              Icons.bar_chart_rounded,
+                              color: Color.fromRGBO(89, 139, 237, 1),
+                            )),
+                      ],
+                    )
+                  ],
+                ),
                 // ),
-                // Container(
-                //   margin: const EdgeInsets.symmetric(vertical: 16.0),
-                //   height: 300,
-                //   width: 250,
-                //   child: PageView.builder(
-                //       onPageChanged: (index) {
-                //         setState(() {
-                //           _selectedIndex = index;
-                //         });
-                //       },
-                //       itemCount: productList.length,
-                //       itemBuilder: ((context, index) {
-                //         var banner = productList[index];
-                //         var _scale = _selectedIndex == index ? 1.0 : 0.8;
-                //         return TweenAnimationBuilder(
-                //           duration: Duration(microseconds: 350),
-                //           tween: Tween(begin: _scale, end: _scale),
-                //           builder: (BuildContext context, double value,
-                //               Widget? child) {
-                //             return Transform.scale(scale: value, child: child);
-                //           },
-                //           child: SizedBox(
-                //             // width: 250,
-                //             // height: 400,
-                //             child: Card(
-                //               elevation: 12,
-                //               child: ClipRRect(
-                //                 // borderRadius: const BorderRadius.all(Radius.circular(10)),
-                //                 child: Column(
-                //                   mainAxisAlignment: MainAxisAlignment.start,
-                //                   crossAxisAlignment: CrossAxisAlignment.start,
-                //                   children: [
-                //                     Image.asset(
-                //                       productList[index].imagePath,
-                //                       fit: BoxFit.cover,
-                //                       // width: 150,
-                //                       // height: 180,
-                //                     ),
-                //                     const SizedBox(
-                //                       height: 10,
-                //                     ),
-                //                     Padding(
-                //                       padding: const EdgeInsets.all(8.0),
-                //                       child: Text(
-                //                         productList[index].title,
-                //                         style: const TextStyle(fontSize: 15),
-                //                       ),
-                //                     ),
-                //                     Padding(
-                //                       padding: const EdgeInsets.symmetric(
-                //                           horizontal: 8),
-                //                       child: Row(
-                //                         mainAxisAlignment:
-                //                             MainAxisAlignment.spaceBetween,
-                //                         children: [
-                //                           Text(
-                //                             '\$${productList[index].lessons}',
-                //                             style: const TextStyle(
-                //                                 fontWeight: FontWeight.bold),
-                //                           ),
-                //                           Text(
-                //                             '${productList[index].tag}',
-                //                             style: const TextStyle(
-                //                                 color: Colors.blue),
-                //                           )
-                //                         ],
-                //                       ),
-                //                     )
-                //                   ],
-                //                 ),
-                //               ),
-                //             ),
-                //           ),
-                //           child: Container(
-                //             margin:
-                //                 const EdgeInsets.symmetric(horizontal: 16.0),
-                //             decoration: BoxDecoration(
-                //               borderRadius: BorderRadius.circular(20),
-                //               image: DecorationImage(
-                //                   image:
-                //                       AssetImage(productList[index].imagePath),
-                //                   fit: BoxFit.cover),
-                //             ),
-                //           ),
-                //         );
-                //       })),
-                // ),
+                SizedBox(
+                  height: 30,
+                ),
+                titleText(
+                  Title: "Programs for yous",
+                ),
+                SizedBox(
+                  height: 10,
+                ),
                 cardTile(),
-
                 SizedBox(
                   height: 20,
                 ),
@@ -260,7 +151,7 @@ class _HomepageState extends State<Homepages> {
                 SizedBox(
                   height: 10,
                 ),
-                cardTile(),
+                cardTile3(),
                 SizedBox(
                   height: 20,
                 ),
@@ -271,16 +162,6 @@ class _HomepageState extends State<Homepages> {
                   height: 10,
                 ),
                 cardTile2(),
-
-                // Card(
-                //   child: SingleChildScrollView(
-                //     scrollDirection: Axis.horizontal,
-                //     child: Container(
-                //       width: 500,
-                //       height: 200,
-                //     ),
-                //   ),
-                // )
               ]),
         ),
       ),

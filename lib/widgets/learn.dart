@@ -6,7 +6,7 @@ class learn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Center(child: Text('Hub')),
+      child: Center(child: Text('Learn')),
     );
   }
 }

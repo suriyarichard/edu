@@ -5,10 +5,11 @@ import 'package:flutter/src/widgets/framework.dart';
 
 class tracker extends StatelessWidget {
   String name;
-  // final String icons;
+  Icon icon;
   tracker({
     super.key,
     required this.name,
+    required this.icon,
   });
 
   @override
@@ -28,7 +29,7 @@ class tracker extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Icon(Icons.golf_course),
+            icon,
             Text(
               name,
               style: TextStyle(
