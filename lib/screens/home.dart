@@ -84,7 +84,7 @@ class _HomepageState extends State<Homepages> {
                   ),
                 ),
                 SizedBox(
-                  height: 10,
+                  height: 20,
                 ),
                 // Padding(
                 // padding: const EdgeInsets.all(8.0),
@@ -111,7 +111,7 @@ class _HomepageState extends State<Homepages> {
                       ],
                     ),
                     SizedBox(
-                      height: 5,
+                      height: 15,
                     ),
                     Row(
                       children: [
@@ -133,33 +133,33 @@ class _HomepageState extends State<Homepages> {
                 ),
                 // ),
                 SizedBox(
-                  height: 30,
+                  height: 40,
                 ),
                 titleText(
                   Title: "Programs for yous",
                 ),
                 SizedBox(
-                  height: 10,
+                  height: 15,
                 ),
                 cardTile(),
                 SizedBox(
-                  height: 20,
+                  height: 30,
                 ),
                 titleText(
                   Title: "Events and experiences",
                 ),
                 SizedBox(
-                  height: 10,
+                  height: 15,
                 ),
                 cardTile3(),
                 SizedBox(
-                  height: 20,
+                  height: 30,
                 ),
                 titleText(
                   Title: "Lessons for you",
                 ),
                 SizedBox(
-                  height: 10,
+                  height: 15,
                 ),
                 cardTile2(),
               ]),
