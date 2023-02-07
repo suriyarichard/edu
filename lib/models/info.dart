@@ -8,6 +8,7 @@ class Product {
   Product(this.imagePath, this.title, this.lessons, this.tag, this.icons);
 }
 
+
 List<Product> productList = [
   Product(
     'assets/images/pic1.png',

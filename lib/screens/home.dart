@@ -151,7 +151,7 @@ class _HomepageState extends State<Homepages> {
                 SizedBox(
                   height: 15,
                 ),
-                cardTile3(),
+                cardTile2(),
                 SizedBox(
                   height: 30,
                 ),
@@ -161,7 +161,7 @@ class _HomepageState extends State<Homepages> {
                 SizedBox(
                   height: 15,
                 ),
-                cardTile2(),
+                cardTile3(),
               ]),
         ),
       ),
