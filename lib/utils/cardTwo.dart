@@ -1,7 +1,6 @@
 import 'dart:math';
 import 'dart:convert';
 
-import 'package:edu/models/info.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';

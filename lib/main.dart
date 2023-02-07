@@ -1,8 +1,8 @@
-import 'package:edu/screens/home.dart';
+
 import 'package:edu/screens/mainPage.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/date_symbol_data_local.dart';
-import 'package:intl/intl.dart';
+
 
 void main() {
   runApp(const MyApp());
